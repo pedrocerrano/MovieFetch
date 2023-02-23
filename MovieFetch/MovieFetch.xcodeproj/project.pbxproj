@@ -29,7 +29,7 @@
 		29811DA529A7C50700B2116E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29811DAB29A7CC8900B2116E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		29811DB129A7CE3700B2116E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		29811DB429A7D04200B2116E /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = SOURCE_ROOT; };
+		29811DB429A7D04200B2116E /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieController.swift; path = "MovieFetch/Model Controller/MovieController.swift"; sourceTree = SOURCE_ROOT; };
 		29811DB629A7DDB300B2116E /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
 		29811DB929A7DE7E00B2116E /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
