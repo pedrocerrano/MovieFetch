@@ -43,7 +43,7 @@ extension MovieListVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieListTableViewCell else { return UITableViewCell() }
         
         let movie = movies[indexPath.row]
-        cell.setConfiguration(with: movie)
+        cell.updateUI(movie: movie)
         
         return cell
     }
