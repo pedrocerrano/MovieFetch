@@ -16,10 +16,10 @@ struct Constants {
         static let apiKeyKey         = "api_key"
         static let apiKeyValue       = "18f6f43a0df939c87e2ea552d34b5550"
         
-        static let queryKey          = "query"
+        static let movieQueryKey     = "query"
         
-        static let includeAdultKey   = "include_adult"
-        static let includeAdultValue = "false"
+        static let adultFilterKey    = "include_adult"
+        static let adultFilterValue  = "false"
     }
     
     struct PosterURLs {
