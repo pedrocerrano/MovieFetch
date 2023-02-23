@@ -5,7 +5,7 @@
 //  Created by iMac Pro on 2/23/23.
 //
 
-import Foundation
+import UIKit
 
 class MovieController {
     
@@ -43,6 +43,31 @@ class MovieController {
                 print("Unable to retreive Movie List data: \(error.localizedDescription)")
                 completion(nil)
             }
+        }.resume()
+    }
+    
+    static func fetchPoster(forMovie movie: Movie, completion: @escaping (UIImage?) -> Void) {
+        guard let posterBaseURL = URL(string: Constants.PosterURLs.posterBaseURL) else { completion(nil) ; return }
+        var urlComponents = URLComponents(url: posterBaseURL, resolvingAgainstBaseURL: true)
+        urlComponents?.path.append(movie.posterPath)
+        
+        guard let finalPosterURL = urlComponents?.url else { completion(nil) ; return }
+        print("Final Poster URL: \(finalPosterURL)")
+        
+        URLSession.shared.dataTask(with: finalPosterURL) { posterData, response, error in
+            if let error = error {
+                print("Error is Poster request: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Poster Image Status Code: \(response.statusCode)")
+            }
+            
+            guard let data = posterData else { completion(nil) ; return }
+            let poster = UIImage(data: data)
+            completion(poster)
         }.resume()
     }
 }

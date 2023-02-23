@@ -35,7 +35,10 @@ extension Movie {
         guard let title      = dictionary[Keys.title.rawValue] as? String,
               let overview   = dictionary[Keys.overview.rawValue] as? String,
               let posterPath = dictionary[Keys.posterPath.rawValue] as? String,
-              let rating     = dictionary[Keys.rating.rawValue] as? Double else { return nil }
+              let rating     = dictionary[Keys.rating.rawValue] as? Double else {
+            print("Failed to initialize a Movie object from library.")
+            return nil
+        }
         
         self.init(title: title, overview: overview, posterPath: posterPath, rating: rating)
     }
